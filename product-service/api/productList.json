@@ -1,0 +1,58 @@
+[
+    {
+        "count": 4,
+        "description": "Leonardo da Vinci, circa 1500",
+        "id": "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
+        "price": 469.7,
+        "title": "Salvator Mundi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg"
+    },
+    {
+        "count": 6,
+        "description": "Willem de Kooning, 1955",
+        "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a0",
+        "price": 324,
+        "title": "Interchange",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/5f/Photo_of_Interchanged_by_Willem_de_Kooning.jpg"
+    },
+    {
+        "count": 12,
+        "description": "Paul Cézanne, 1892/93",
+        "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a1",
+        "price": 284,
+        "title": "The Card Players",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne.jpg"
+    },
+    {
+        "count": 7,
+        "description": "Paul Gauguin, 1892",
+        "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a2",
+        "price": 227,
+        "title": "Nafea Faa Ipoipo (When Will You Marry?)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Paul_Gauguin%2C_Nafea_Faa_Ipoipo%3F_%28When_Will_You_Marry%3F%29_1892%2C_oil_on_canvas%2C_101_x_77_cm.jpg"
+    },
+    {
+        "count": 8,
+        "description": "Jackson Pollock, 1948",
+        "id": "7567ec4b-b10c-48c5-9345-fc73348a80a1",
+        "price": 216,
+        "title": "Number 17A",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f2/Number_17A.jpg"
+    },
+    {
+        "count": 2,
+        "description": "Gustav Klimt, 1904–07",
+        "id": "7567ec4b-b10c-48c5-9445-fc73c48a80a2",
+        "price": 210.7,
+        "title": "Wasserschlangen II",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Klimt_-_Wasserschlangen_II_%28Freundinnen%29_-_1904.jpeg"
+    },
+    {
+        "count": 3,
+        "description": "Mark Rothko, 1951",
+        "id": "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
+        "price": 201,
+        "title": "No. 6 (Violet, Green and Red)",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/03/No._6_%28Violet%2C_Green_and_Red%29.jpg"
+    }   
+]
