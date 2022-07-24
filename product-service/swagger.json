@@ -2,10 +2,10 @@
     "swagger" : "2.0",
     "info" : {
         "description" : "API for best shop of art",
-        "version" : "2020-11-02T19:02:12Z",
+        "version" : "2022-07-24T19:02:12Z",
         "title" : "dev-product-service"
     },
-    "host" : "340ixzs2ig.execute-api.eu-west-1.amazonaws.com",
+    "host" : "via3hnyg9k.execute-api.eu-west-1.amazonaws.com",
     "basePath" : "/dev",
     "schemes" : [ "https" ],
     "paths" : {

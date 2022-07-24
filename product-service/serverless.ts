@@ -82,6 +82,11 @@ const serverlessConfiguration = {
       },
       environment: {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+        PG_HOST: '',
+        PG_PORT: -1,
+        PG_DATABASE: '',
+        PG_USERNAME: '',
+        PG_PASSWORD: ''
       },
     },
     functions: {
@@ -139,6 +144,18 @@ const serverlessConfiguration = {
               //     }
               //   ]
               // }
+            }
+          }
+        ]
+      },
+      addNewProduct: {
+        handler: 'handler.addNewProduct',
+        events: [
+          {
+            http: {
+              method: 'post',
+              path: 'product',
+              cors: true
             }
           }
         ]
