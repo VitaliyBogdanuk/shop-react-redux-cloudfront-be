@@ -1,0 +1,134 @@
+{
+    "swagger" : "2.0",
+    "info" : {
+        "description" : "API for best shop of art",
+        "version" : "2020-11-02T19:02:12Z",
+        "title" : "dev-product-service"
+    },
+    "host" : "340ixzs2ig.execute-api.eu-west-1.amazonaws.com",
+    "basePath" : "/dev",
+    "schemes" : [ "https" ],
+    "paths" : {
+        "/products" : {
+        "get" : {
+            "summary" : "Get all products",
+            "description" : "method to get all products",
+            "produces" : [ "application/json" ],
+            "responses" : {
+            "200" : {
+                "description" : "Success response",
+                "schema" : {
+                "$ref" : "#/definitions/SearchResponse"
+                }
+            }
+            }
+        },
+        "options" : {
+            "consumes" : [ "application/json" ],
+            "produces" : [ "application/json" ],
+            "responses" : {
+            "200" : {
+                "description" : "200 response",
+                "headers" : {
+                "Access-Control-Allow-Origin" : {
+                    "type" : "string"
+                },
+                "Access-Control-Allow-Methods" : {
+                    "type" : "string"
+                },
+                "Access-Control-Allow-Headers" : {
+                    "type" : "string"
+                }
+                }
+            }
+            }
+        }
+        },
+        "/products/{productId}" : {
+        "get" : {
+            "summary" : "Get product by id",
+            "description" : "method to get product by id",
+            "produces" : [ "application/json" ],
+            "parameters" : [ {
+            "name" : "productId",
+            "in" : "path",
+            "required" : true,
+            "type" : "string"
+            } ],
+            "responses" : {
+            "200" : {
+                "description" : "Success response",
+                "schema" : {
+                "$ref" : "#/definitions/Product"
+                }
+            },
+            "404" : {
+                "description" : "Error response: product not found",
+                "schema" : {
+                "$ref" : "#/definitions/ProductNotFoundResponse"
+                }
+            }
+            }
+        },
+        "options" : {
+            "consumes" : [ "application/json" ],
+            "produces" : [ "application/json" ],
+            "responses" : {
+            "200" : {
+                "description" : "200 response",
+                "headers" : {
+                "Access-Control-Allow-Origin" : {
+                    "type" : "string"
+                },
+                "Access-Control-Allow-Methods" : {
+                    "type" : "string"
+                },
+                "Access-Control-Allow-Headers" : {
+                    "type" : "string"
+                }
+                }
+            }
+            }
+        }
+        }
+    },
+    "definitions" : {
+        "ProductNotFoundResponse" : {
+        "type" : "object",
+        "properties" : {
+            "message" : {
+            "type" : "string"
+            }
+        },
+        "description" : "Product is not found"
+        },
+        "Product" : {
+        "type" : "object",
+        "properties" : {
+            "image" : {
+            "type" : "string"
+            },
+            "price" : {
+            "type" : "number"
+            },
+            "description" : {
+            "type" : "string"
+            },
+            "id" : {
+            "type" : "string"
+            },
+            "title" : {
+            "type" : "string"
+            }
+        },
+        "description" : "Product model in search page"
+        },
+        "SearchResponse" : {
+        "type" : "array",
+        "description" : "Search result model in search page",
+        "items" : {
+            "$ref" : "#/definitions/Product"
+        }
+        }
+    }
+} 

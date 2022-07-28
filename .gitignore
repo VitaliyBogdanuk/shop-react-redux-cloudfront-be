@@ -1,0 +1,15 @@
+# package directories
+node_modules
+jspm_packages
+
+# TernJS port file
+.tern-port
+
+# Webpack directories
+.webpack
+
+#VS Code
+.vscode 
+
+# Serverless directories
+.serverless
