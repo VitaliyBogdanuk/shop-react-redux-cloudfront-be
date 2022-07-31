@@ -92,7 +92,7 @@ const serverlessConfiguration = {
         {
             Effect: 'Allow',
             Action: 's3:*',
-            Resource: 'arn:aws:s3:::the-art-vault-uploaded'
+            Resource: 'arn:aws:s3:::import-service-dev-the-art-vault-uploaded'
         }
       ]
     },
@@ -121,7 +121,7 @@ const serverlessConfiguration = {
             events: [
                 {
                     s3: {
-                        bucket: 'the-art-vault-uploaded',
+                        bucket: 'import-service-dev-the-art-vault-uploaded',
                         event: 's3:ObjectCreated:*',
                         rules: [
                             {
