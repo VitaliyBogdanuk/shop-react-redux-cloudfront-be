@@ -1,10 +1,17 @@
 import { Product } from '../models';
-import products from './productList.json';
+import {getProductsListDAL, getProductByIdDAL, addNewProductDAL} from '../dal';
 
-export const getProductList = (): Promise<Array<Product>> => new Promise((resolve, reject) => {
-    products ? resolve(products) : reject({message: 'Products is not found!'});
-});
-export const getProductById = (queryId: string): Promise<Product> => new Promise((resolve, reject) => {
-    const product = products.find(({id}) => id === queryId);
-    product ? resolve(product) : reject({message: 'Product is not found!'});
-}); 
+export const getProductList = (): Promise<Array<Product>> => getProductsListDAL();
+export const getProductById = async (queryId: string): Promise<Product> => {
+    try {
+        const product = await getProductByIdDAL(queryId);
+        if (product) {
+            return product;
+        } else {
+            throw('Product is not found!');
+        }
+    } catch (error) {
+        throw (error);
+    }
+};
+export const addNewProduct = (body: Product) => addNewProductDAL(body);
