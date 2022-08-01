@@ -6,7 +6,7 @@ export const importProductsFile: APIGatewayProxyHandler = async event => {
     const fileName = event.queryStringParameters.name;
 
     const signedUrl = await s3.getSignedUrlPromise('putObject', {
-        Bucket: 'the-art-vault-uploaded',
+        Bucket: 'import-service-dev-the-art-vault-uploaded',
         Key: `uploaded/${fileName}`,
         // todo: add contentType from queryStringParameter
         ContentType: 'application/vnd.ms-excel'
@@ -18,7 +18,7 @@ export const importProductsFile: APIGatewayProxyHandler = async event => {
             'Access-Control-Allow-Origin': '*',
             "Access-Control-Allow-Headers" : "*",
             'Access-Control-Allow-Credentials': true,
-            'Access-Control-Allow-Methods': 'GET, PUT'
+            'Access-Control-Allow-Methods': 'GET, OPTIONS, POST'
         },
         body: signedUrl
     }
